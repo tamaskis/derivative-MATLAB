@@ -8,7 +8,7 @@ Numerically evaluates the derivative of a univariate function over a domain or a
 **Discrete Implementation:** `f` and `x` are vectors, where `f` stores the evaluation of <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> at every point in the `x`.
 
 `df = differentiate(f,x)`\
-`df = differentiate(f,x,x_star)`\
+`df = differentiate(f,x,x_star)`
 
 **Continuous Implementation:** `f` is a function handles that defines <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a>.
 
@@ -20,7 +20,9 @@ Numerically evaluates the derivative of a univariate function over a domain or a
 
 ## Description
 
-`[c0,c1] = least_squares_fit(x,y)` returns the coefficients `c0` and `c1` for the linear least squares fit <img src="https://latex.codecogs.com/svg.latex?y=c_{0}&plus;c_{1}x" title="y=c_{0}+c_{1}x" /> to a set of data defined by the vectors `x` (independent variable) and `y` (dependent variable).
+**Discrete Implementation**
+
+`df = differentiate(f,x)` returns the derivative of a function <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> over a domain. `x` is a vector of points defining the domain, and `f` is the vector storing the evaluation of <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> corresponding to everry point in `x`. `x` and `f` can also be though of as the data set <a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{f}\textrm{&space;vs.&space;}\mathbf{x}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\mathbf{f}\textrm{&space;vs.&space;}\mathbf{x}" title="\mathbf{f}\textrm{ vs. }\mathbf{x}" /></a>.
             
 `[c0,c1] = least\_squares\_fit(x,y,'linear')` returns the coefficients `c0` and `c1` for the linear least squares fit <img src="https://latex.codecogs.com/svg.latex?y=c_{0}&plus;c_{1}x" title="y=c_{0}+c_{1}x" /> to a set of data defined by the vectors `x` (independent variable) and `y` (dependent variable).
  
