@@ -22,17 +22,11 @@ Numerically evaluates the derivative of a univariate function over a domain or a
 
 **Discrete Implementation**
 
-`df = differentiate(f,x)` returns the derivative of a function <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> over a domain. `x` is a vector of points defining the domain, and `f` is the vector storing the evaluation of <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> corresponding to everry point in `x`. `x` and `f` can also be though of as the data set <a href="https://www.codecogs.com/eqnedit.php?latex=\mathbf{f}\textrm{&space;vs.&space;}\mathbf{x}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?\mathbf{f}\textrm{&space;vs.&space;}\mathbf{x}" title="\mathbf{f}\textrm{ vs. }\mathbf{x}" /></a>.
+`df = differentiate(f,x)` returns the derivative of a function <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> over a domain. `x` is a vector of points defining the domain, and `f` is the vector storing the evaluation of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> corresponding to everry point in `x`. `x` and `f` can also be though of as the data set <img src="https://latex.codecogs.com/svg.latex?\mathbf{f}\textrm{&space;vs.&space;}\mathbf{x}" title="\mathbf{f}\textrm{ vs. }\mathbf{x}" />.
             
-`[c0,c1] = least\_squares\_fit(x,y,'linear')` returns the coefficients `c0` and `c1` for the linear least squares fit <img src="https://latex.codecogs.com/svg.latex?y=c_{0}&plus;c_{1}x" title="y=c_{0}+c_{1}x" /> to a set of data defined by the vectors `x` (independent variable) and `y` (dependent variable).
+`df = differentiate(f,x,x_star)` returns the derivative of the function <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> at a specified point $x^{*}$ (or set of points $\vec{x}^{*}$). `x` is a vector of points defining the domain, `f` is the vector storing the evaluation of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /> corresponding to every point in `x`, and `x_star` is either a scalar $x^{*}$ or vector $\vec{x}^{*}$ storing the point(s) where we wish to evaluate the derivative of <img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" />.
  
-`c = least\_squares\_fit(x,y,'poly',n)` returns the coefficient vector <img src="https://latex.codecogs.com/svg.latex?\mathbf{c}=\left(c_{0},...,c_{n}\right)^{T}" title="\mathbf{c}=\left(c_{0},...,c_{n}\right)^{T}" /> for the <img src="https://latex.codecogs.com/svg.latex?n^{\textrm{th}}" title="n^{\textrm{th}}" /> degree polynomial least squares fit <img src="https://latex.codecogs.com/svg.latex?y=c_{0}&plus;c_{1}x&plus;\dots&plus;c_{n}x^{n}" title="y=c_{0}+c_{1}x+\dots+c_{n}x^{n}" /> to a set of data defined by the vectors `x` (independent variable) and `y` (dependent variable).
 
-`[a,b] = least\_squares\_fit(x,y,'power')` returns the coefficients `a` and `b` for the power least squares fit <img src="https://latex.codecogs.com/svg.latex?y=ax^{b}" title="y=ax^{b}" /> to a set of data defined by the vectors `x` (independent variable) and `y` (dependent variable).
-
-`[a,b] = least\_squares\_fit(x,y,'exp')` returns the coefficients `a` and `b` for the exponential least squares fit <img src="https://latex.codecogs.com/svg.latex?y=ae^{bx}" title="y=ae^{bx}" /> to a set of data  defined by the vectors `x` (independent variable) and `y` (dependent variable).
-
-`[a,b] = least\_squares\_fit(x,y,'log')` returns the coefficients `a` and `b` for the logarithmic least squares fit <img src="https://latex.codecogs.com/svg.latex?y=a&plus;b\ln{x}" title="y=a+b\ln{x}" /> to a set of data defined by the vectors `x` (independent variable) and `y` (dependent variable).
 
 
 ## Additional Documentation and Examples
