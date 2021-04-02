@@ -1,16 +1,20 @@
 # `differentiate`
 
-Fits a linear, polynomial, power, exponential, or logarithmic model to a set of data using the method of least squares.
+Numerically evaluates the derivative of a univariate function over a domain or at a specified point (or set of points).
 
 
 ## Syntax
 
-`[c0,c1] = least_squares_fit(x,y)}`\
-`[c0,c1] = least_squares_fit(x,y,'linear')}`\
-`c = least_squares_fit(x,y,'poly',n)}`\
-`[a,b] = least_squares_fit(x,y,'power')}`\
-`[a,b] = least_squares_fit(x,y,'exp')}`\
-`[a,b] = least_squares_fit(x,y,'log')}`
+**Discrete Implementation:** `f` and `x` are vectors, where `f` stores the evaluation of <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> at every point in the `x`.
+`df = differentiate(f,x)`\
+`df = differentiate(f,x,x_star)`\
+
+**Continuous Implementation:** `f` is a function handles that defines <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a>.
+
+`[df,x] = differentiate(f,[a,b])`\
+`[df,x] = differentiate(f,[a,b],dx)`\
+`df = differentiate(f,x_star)`\
+`df = differentiate(f,x_star,dx)`
 
 
 ## Description
