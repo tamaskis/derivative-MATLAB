@@ -6,6 +6,7 @@ Numerically evaluates the derivative of a univariate function over a domain or a
 ## Syntax
 
 **Discrete Implementation:** `f` and `x` are vectors, where `f` stores the evaluation of <a href="https://www.codecogs.com/eqnedit.php?latex=f(x)" target="_blank"><img src="https://latex.codecogs.com/svg.latex?f(x)" title="f(x)" /></a> at every point in the `x`.
+
 `df = differentiate(f,x)`\
 `df = differentiate(f,x,x_star)`\
 
