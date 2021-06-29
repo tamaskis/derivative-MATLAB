@@ -1,5 +1,4 @@
-% differentiate  Numerically evaluates the derivative of a univariate 
-% function over a domain or at a specified point (or set of points).
+
 %
 % DISCRETE (i.e. "x" and "f" are vectors, where "f" stores the evaluation
 % of f(x) at every point in the vector "x"):
@@ -83,6 +82,79 @@
 %                   upper bound "b")
 %               (b) at the point(s) x*
 %         x - the point(s) at which the derivative is evaluated
+
+
+
+
+%==========================================================================
+%
+% differentiate  Numerically evaluates the derivative of a univariate 
+% function over a domain or at a specified point (or set of points).
+%
+%   ------------------------
+%   Discrete Implementation:
+%   ------------------------
+%   df = differentiate(f,x)
+%   df = differentiate(f,x,x_star)
+%
+%   --------------------------
+%   Continuous Implementation:
+%   --------------------------
+%   [df,x] = differentiate(f,[a,b])
+%   [df,x] = differentiate(f,[a,b],dx)
+%   df = differentiate(f,x_star)
+%   df = differentiate(f,x_star,dx)
+%
+% See also diff, gradient
+%
+% Copyright © 2021 Tamas Kis
+% Last Update: 2021-06-18
+%
+%--------------------------------------------------------------------------
+%
+% MATLAB Central File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/89719-numerical-differentiation-differentiate
+% GitHub: https://github.com/tamaskis/differentiate-MATLAB
+%
+% See EXAMPLES.mlx for examples and "DOCUMENTATION.pdf" for additional 
+% documentation. Both of these files are included with the download.
+%
+%--------------------------------------------------------------------------
+%
+% ---------------------------------
+% INPUTS (DISCRETE IMPLEMENTATION):
+% ---------------------------------
+%   f       - ((N+1)×1 or 1×(N+1)) vector storing evaluations of f(x)
+%   x       - ((N+1)×1 or 1×(N+1)) vector of x values (discretized domain)
+%   x_star  - (OPTIONAL) (p×1 or 1×p) scalar OR vector "x_star" 
+%             representing the points x* at which to differentiate
+%
+% ----------------------------------
+% OUTPUTS (DISCRETE IMPLEMENTATION):
+% ----------------------------------
+%   df      - ((N+1)×1, 1×(N+1), p×1, or 1×p) derivative of f(x) w.r.t. x
+%             evaluated at:
+%               --> all the points in x (cumulative differentiation)
+%               --> all the points in x_star (point differentiation)
+%
+%--------------------------------------------------------------------------
+%
+% -----------------------------------
+% INPUTS (CONTINUOUS IMPLEMENTATION):
+% -----------------------------------
+%   f               - (function_handle) f(x)
+%   [a,b] OR x_star - (1×2) upper  and lower bounds of domain to
+%                     differentiate over
+%                   - (p×1 or 1×p) scalar OR vector "x_star" storing the
+%                     points x* at which to differentiate
+%   dx              - (OPTIONAL) (1×1) grid spacing
+%
+% ------------------------------------
+% OUTPUTS (CONTINUOUS IMPLEMENTATION):
+% ------------------------------------
+%   df              - ((N+1)×1, 1×(N+1), p×1, or 1×p) derivative of 
+%                         f(x) w.r.t. x evaluated at:
+%
+%==========================================================================
 function [df,x] = differentiate(f,x1,x2)
     
     % sets up necessary parameters if using continuous implementation
