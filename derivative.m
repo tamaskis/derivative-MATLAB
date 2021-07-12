@@ -27,7 +27,7 @@
 % ------
 %   x       - ((N+1)×1 or 1×(N+1)) independent variable data
 %   f       - ((N+1)×1 or 1×(N+1)) dependent variable data
-%   x_star  - (OPTIONAL) (p×1 or 1×p) points at which to derivative
+%   x_star  - (OPTIONAL) (p×1 or 1×p) points at which to differentiate
 %
 % -------
 % OUTPUT:
@@ -43,7 +43,7 @@
 %   --> If "x_star" is not input, then "df" stores the derivative of f with
 %       with respect to x at the points in "x".
 %   --> N = number of data points (i.e. length of "f" and "x")
-%   --> p = number of points to derivative at (i.e. length of "x_star")
+%   --> p = number of points to differentiate at (i.e. length of "x_star")
 %
 %==========================================================================
 function [df,x] = derivative(x,f,x_star)
@@ -51,21 +51,21 @@ function [df,x] = derivative(x,f,x_star)
     % determines number of subintervals
     N = length(x)-1;
 
-    % preallocates derivative
+    % preallocates vector to store derivative
     df = zeros(size(x));
 
-    % derivative at lower bound using forward difference
+    % approximates derivative at lower bound using forward difference
     df(1) = (f(2)-f(1))/(x(2)-x(1));
 
-    % derivative at upper bound using backward difference
+    % approximates derivative at upper bound using backward difference
     df(N+1) = (f(N+1)-f(N))/(x(N+1)-x(N));
 
-    % derivatives at all other nodes using central differences
+    % approximates derivatives at all other nodes using central differences
     for i = 2:N
         df(i) = (f(i+1)-f(i-1))/(x(i+1)-x(i-1));
     end
     
-    % calculates derivative at specified point(s) via linear interpolation
+    % approximates derivative at specified points via linear interpolation
     if nargin == 3
         df = interp1(x,df,x_star,'linear','extrap');
     end
