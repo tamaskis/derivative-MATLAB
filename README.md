@@ -13,13 +13,13 @@ Numerical differentiation of data (i.e. arrays).
 
 `df = differentiate(f,x)` returns the derivative of a set of data, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" />  (which are stored in `f` and `x`). `df` stores the derivative of `f` vs. `x` at every point in `x`.
             
-`df = differentiate(f,x,x_star)` returns the derivative of a set of data,  <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" />  (which are stored in `f` and `x`), at the set of points specified by <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}^{*}" title="\mathbf{x}^{*}" /> (`x_star`). `x_star` can be a scalar or a vector.
+`df = differentiate(f,x,x_star)` returns the derivative of a set of data, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" />  (which are stored in `f` and `x`), at the set of points specified by <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}^{*}" title="\mathbf{x}^{*}" /> (`x_star`). `x_star` can be a scalar or a vector.
 
 
 ## Additional Notes
 
-- This function is the equivalent of `trapz` and `cumtrapz` for numerical differentiation.
-- This function only performs differentiation on arrays. To differentiate a function given as a function handle, a workaround is to evaluate the function over an interval defined by the array `x`, and then pass the evaluations of the function to `differentiate`.
+- This function is the equivalent of `trapz` and `cumtrapz` for numerical differentiation and is especially useful for estimating the derivative of the unknown underlying function (i.e. there is some underlying function <img src="https://latex.codecogs.com/svg.latex?\inline&space;f(x)" title="f(x)" /> that describes the data, but this function is unknown and we use the data set <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" /> to approximate its derivative).
+- If we _do_ know the underlying function <img src="https://latex.codecogs.com/svg.latex?\inline&space;f(x)" title="f(x)" />, then we can still use `differentiate` to estimate its derivative. We can do this by defining a set of points `x`, then populating a vector `f` with evaluations of <img src="https://latex.codecogs.com/svg.latex?\inline&space;f(x)" title="f(x)" /> at every point in `x`. However, if the underlying function is known, `derivest` (https://www.mathworks.com/matlabcentral/fileexchange/13490-adaptive-robust-numerical-differentiation?s_tid=srchtitle) is a superior function to use.
 
 
 ## Additional Documentation and Examples
