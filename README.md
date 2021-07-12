@@ -22,6 +22,7 @@ Numerical differentiation of data (i.e. arrays).
 - If we _do_ know the underlying function <img src="https://latex.codecogs.com/svg.latex?\inline&space;f(x)" title="f(x)" />, then we can still use `differentiate` to estimate its derivative. We can do this by defining a set of points `x` and then populating a vector `f` with evaluations of <img src="https://latex.codecogs.com/svg.latex?\inline&space;f(x)" title="f(x)" /> at every point in `x`. However, if the underlying function is known, `derivest` (https://www.mathworks.com/matlabcentral/fileexchange/13490-adaptive-robust-numerical-differentiation?s_tid=srchtitle) is a superior function to use.
 
 
-## Additional Documentation and Examples
+## Examples and Additional Documentation
 
-See "DOCUMENTATION.pdf" for additional documentation and examples.
+   -  See "EXAMPLES.mlx" or the "Examples" tab on the File Exchange page for examples. 
+   -  See "DOCUMENTATION.pdf" (included with download, also available at https://github.com/tamaskis/secant_method-MATLAB/blob/main/DOCUMENTATION.pdf) for additional documentation.
