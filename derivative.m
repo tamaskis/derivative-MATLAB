@@ -13,7 +13,7 @@
 %
 %--------------------------------------------------------------------------
 %
-% MATLAB Central File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/89719-numerical-differentiation-derivative
+% MATLAB Central File Exchange: https://www.mathworks.com/matlabcentral/fileexchange/89719-numerical-differentiation-of-data-derivative
 % GitHub: https://github.com/tamaskis/derivative-MATLAB
 %
 % See EXAMPLES.mlx for examples and "DOCUMENTATION.pdf" for additional 
