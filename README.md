@@ -13,7 +13,7 @@ Numerical differentiation of data (i.e. arrays).
 
 `df = differentiate(f,x)` returns the derivative of a set of data, <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" />  (which are stored in `f` and `x`). `df` stores the derivative of `f` vs. `x` at every point in `x`.
             
-`df = differentiate(f,x,x_star)` returns the derivative of a set of data,  <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" />  (which are stored in `f` and `x`), at the set of points specified by <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}^{*}" title="\mathbf{x}^{*}" /> (`x_star`).
+`df = differentiate(f,x,x_star)` returns the derivative of a set of data,  <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{f}" title="\mathbf{f}" /> vs. <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}" title="\mathbf{x}" />  (which are stored in `f` and `x`), at the set of points specified by <img src="https://latex.codecogs.com/svg.latex?\inline&space;\mathbf{x}^{*}" title="\mathbf{x}^{*}" /> (`x_star`). `x_star` can be a scalar or a vector.
 
 
 ## Additional Notes
