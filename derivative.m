@@ -1,6 +1,7 @@
 %==========================================================================
 %
-% derivative  Numerical differentiation of data (i.e. arrays).
+% derivative  Numerical differentiation of data (i.e. arrays) over the 
+% domain of the data or at specified points.
 %
 %   df = derivative(x,f)
 %   df = derivative(x,f,x_star)
