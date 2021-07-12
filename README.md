@@ -25,4 +25,4 @@ Numerical differentiation of data (i.e. arrays).
 ## Examples and Additional Documentation
 
    -  See "EXAMPLES.mlx" or the "Examples" tab on the File Exchange page for examples. 
-   -  See "DOCUMENTATION.pdf" (included with download, also available at https://github.com/tamaskis/secant_method-MATLAB/blob/main/DOCUMENTATION.pdf) for additional documentation.
+   -  See "DOCUMENTATION.pdf" (included with download, also available at https://github.com/tamaskis/derivative-MATLAB/blob/main/DOCUMENTATION.pdf) for additional documentation.
