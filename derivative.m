@@ -10,7 +10,7 @@
 %
 % Copyright © 2021 Tamas Kis
 % Contact: tamas.a.kis@outlook.com
-% Last Update: 2021-07-12
+% Last Update: 2021-07-16
 %
 %--------------------------------------------------------------------------
 %
@@ -48,7 +48,7 @@
 %==========================================================================
 function [df,x] = derivative(x,f,x_star)
 
-    % determines number of subintervals
+    % number of subintervals
     N = length(x)-1;
 
     % preallocates vector to store derivative
