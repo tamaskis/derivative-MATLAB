@@ -6,30 +6,35 @@
 %   dy = derivative(x,y)
 %   dy = derivative(x,y,x_star)
 %
-% See also diff, gradient, derivest.
+% See also diff, gradient, iderivative, derivest.
 %
 % Copyright © 2021 Tamas Kis
-% Last Update: 2021-07-25
+% Last Update: 2021-08-10
 % Website: tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
 %
+% TECHNICAL DOCUMENTATION:
+% https://tamaskis.github.io/documentation/Basic%20Numerical%20Calculus.pdf
+%
 % REFERENCES:
-%   [1] Section 2 of https://tamaskis.github.io/documentation/Basic%20Numerical%20Calculus.pdf
+%   [1] http://www.ohiouniversityfaculty.com/youngt/IntNumMeth/lecture27.pdf
+%   [2] https://en.wikipedia.org/wiki/Finite_difference_method
 %
 %--------------------------------------------------------------------------
 %
 % ------
 % INPUT:
 % ------
-%   x       - ((N+1)×1 or 1×(N+1)) independent variable data
-%   y       - ((N+1)×1 or 1×(N+1)) dependent variable data
-%   x_star  - (OPTIONAL) (p×1 or 1×p) points at which to differentiate
+%   x       - ((N+1)×1 or 1×(N+1) double) independent variable data
+%   y       - ((N+1)×1 or 1×(N+1) double) dependent variable data
+%   x_star  - (OPTIONAL) (p×1 or 1×p double) points at which to 
+%             differentiate
 %
 % -------
 % OUTPUT:
 % -------
-%   dy      - ((N+1)×1, 1×(N+1), p×1, or 1×p) derivative of y = f(x) w.r.t.
-%             x evaluated at:
+%   dy      - ((N+1)×1, 1×(N+1), p×1, or 1×p double) derivative of y = f(x)
+%             w.r.t. x evaluated at:
 %               --> all the points in x (cumulative differentiation)
 %               --> all the points in x_star (point differentiation)
 %
