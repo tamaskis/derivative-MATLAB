@@ -9,12 +9,12 @@
 % See also diff, gradient, iderivative, derivest.
 %
 % Copyright © 2021 Tamas Kis
-% Last Update: 2021-08-10
-% Website: tamaskis.github.io
+% Last Update: 2021-08-27
+% Website: https://tamaskis.github.io
 % Contact: tamas.a.kis@outlook.com
 %
 % TECHNICAL DOCUMENTATION:
-% https://tamaskis.github.io/documentation/Basic%20Numerical%20Calculus.pdf
+% https://tamaskis.github.io/documentation/Basic_Numerical_Calculus.pdf
 %
 % REFERENCES:
 %   [1] http://www.ohiouniversityfaculty.com/youngt/IntNumMeth/lecture27.pdf

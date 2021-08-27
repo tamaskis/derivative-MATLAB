@@ -25,4 +25,4 @@ Numerical differentiation of data (i.e. arrays).
 ## Examples and Additional Documentation
 
    -  See "EXAMPLES.mlx" or the "Examples" tab on the File Exchange page for examples. 
-   -  See ["Basic Numerical Calculus.pdf"](https://tamaskis.github.io/documentation/Basic%20Numerical%20Calculus.pdf) (also included with download) for the technical documentation.
+   -  See ["Basic_Numerical_Calculus.pdf"](https://tamaskis.github.io/documentation/Basic_Numerical_Calculus.pdf) (also included with download) for the technical documentation.
